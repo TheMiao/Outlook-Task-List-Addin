@@ -28,10 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.caseList = new System.Windows.Forms.ListView();
+            this.caseDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SuspendLayout();
+            // 
+            // caseList
+            // 
+            this.caseList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.caseDescription});
+            this.caseList.Location = new System.Drawing.Point(0, 0);
+            this.caseList.Name = "caseList";
+            this.caseList.Size = new System.Drawing.Size(121, 97);
+            this.caseList.TabIndex = 0;
+            this.caseList.UseCompatibleStateImageBehavior = false;
+            this.caseList.SelectedIndexChanged += new System.EventHandler(this.caseList_SelectedIndexChanged);
+            // 
+            // MainPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.caseList);
+            this.Name = "MainPage";
+            this.Size = new System.Drawing.Size(677, 432);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView caseList;
+        private System.Windows.Forms.ColumnHeader caseDescription;
     }
 }
