@@ -32,9 +32,9 @@ namespace MyTaskList.User_Control
         {
             for (int i = 0; i < 10; i++)
             {
-                caseList.Items.Add($"|1234567890123456{i} | Delete the instance this is the long title test, I have to input as long as I can and test it out if it can auto cross to second line");
+                caseList.Items.Add($"1234567890123456{i} | Delete the instance this is the long title test, I have to input as long as I can and test it out if it can auto cross to second line");
             }
-            
+
             caseList.Items.Add("Delete the instance");
             caseList.Items.Add("Delete the instance");
         }
@@ -46,7 +46,7 @@ namespace MyTaskList.User_Control
         {
             // set up the dock to full width of custom panel
             caseList.Dock = DockStyle.Fill;
-            
+
             // check full details of the item in the list and set the row can be selected
             caseList.View = View.Details;
             caseList.FullRowSelect = true;
