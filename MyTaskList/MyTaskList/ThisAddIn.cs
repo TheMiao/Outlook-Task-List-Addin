@@ -5,13 +5,22 @@ using System.Text;
 using System.Xml.Linq;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Office = Microsoft.Office.Core;
+using MyTaskList.User_Control;
+using Microsoft.Office.Tools;
 
 namespace MyTaskList
 {
     public partial class ThisAddIn
     {
+        private MainPage mainPageUserControl;
+        private CustomTaskPane myCustomTaskPane;
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            mainPageUserControl = new MainPage();
+            myCustomTaskPane = this.CustomTaskPanes.Add(mainPageUserControl, "My Case List");
+            myCustomTaskPane.Visible = true;
+            myCustomTaskPane.Width = 500;
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
